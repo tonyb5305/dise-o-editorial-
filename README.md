@@ -2,7 +2,7 @@
 
 Este proyecto consiste en la creación de un sitio web interactivo que explora los principios fundamentales del diseño visual a través de una experiencia moderna y estructurada.
 
-## 🎯 Objetivo del Proyecto
+##  Objetivo del Proyecto
 
 Desarrollar una página web tipo portafolio conceptual que combine:
 
@@ -24,7 +24,7 @@ Cada sección incluye explicación conceptual e imagen representativa.
 
 ---
 
-## 🧩 Estructura del Proyecto
+##  Estructura del Proyecto
 
 El proyecto está dividido en:
 
@@ -34,7 +34,7 @@ El proyecto está dividido en:
 
 ---
 
-## 🎨 Características Implementadas
+##  Características Implementadas
 
 - Scroll suave entre secciones.
 - Animaciones al aparecer cada concepto.
@@ -45,7 +45,7 @@ El proyecto está dividido en:
 
 ---
 
-## 💡 Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 - HTML5
 - CSS3
@@ -56,9 +56,10 @@ El proyecto está dividido en:
 
 ---
 
-## 📌 Autor
+##  Autor
 
 Luis  
 Proyecto académico de diseño y desarrollo web.
+
 
 © 2026 Luis – Todos los derechos reservados.
