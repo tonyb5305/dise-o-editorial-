@@ -1,0 +1,167 @@
+:root {
+    --primary-color: #0f172a;
+    --accent-color: #3b82f6;
+    --highlight-color: #06b6d4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+}
+
+/* GRID */
+.grid-container {
+    padding: 3rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s ease;
+}
+
+.card-large {
+    grid-column: 1 / span 3;
+    grid-row: span 2;
+    height: 520px;
+}
+
+.card-wide {
+    grid-column: 4 / span 3;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(59,130,246,0.6);
+}
+
+/* FONDOS DE TARJETAS (LO QUE FALTABA) */
+
+.bg1 { background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"); }
+.bg2 { background-image: url("https://images.unsplash.com/photo-1492724441997-5dc865305da7"); }
+.bg3 { background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4"); }
+.bg4 { background-image: url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"); }
+.bg5 { background-image: url("https://images.unsplash.com/photo-1492724441997-5dc865305da7"); }
+
+/* SECCIONES */
+.detalle {
+    padding: 6rem 10%;
+}
+
+.detalle-contenido {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.detalle img {
+    width: 45%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.texto {
+    width: 55%;
+}
+
+.texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.texto p {
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* ANIMACIÓN */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BOTÓN */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent-color);
+    color: white;
+    font-size: 22px;
+    padding: 12px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    transform: scale(1.15);
+    background: var(--highlight-color);
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: var(--primary-color);
+}

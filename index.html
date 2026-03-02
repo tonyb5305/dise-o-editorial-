@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manifiesto de Diseño – Luis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header id="inicio">
+    <h1>Manifiesto de Diseño</h1>
+    <p>Una exploración visual del equilibrio entre arte, tecnología y estructura.</p>
+</header>
+
+<main class="grid-container">
+    <section class="gallery">
+
+        <a href="#minimalismo" class="card card-large bg1">
+            <div class="overlay">
+                <h3>Minimalismo</h3>
+            </div>
+        </a>
+
+        <a href="#contraste" class="card bg2">
+            <div class="overlay">
+                <h3>Contraste</h3>
+            </div>
+        </a>
+
+        <a href="#tipografia" class="card bg3">
+            <div class="overlay">
+                <h3>Tipografía</h3>
+            </div>
+        </a>
+
+        <a href="#composicion" class="card card-wide bg4">
+            <div class="overlay">
+                <h3>Composición</h3>
+            </div>
+        </a>
+
+        <a href="#color" class="card bg5">
+            <div class="overlay">
+                <h3>Color</h3>
+            </div>
+        </a>
+
+    </section>
+</main>
+
+<!-- SECCIONES DETALLE -->
+
+<section id="minimalismo" class="detalle reveal">
+    <div class="detalle-contenido">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="">
+        <div class="texto">
+            <h2>Minimalismo</h2>
+            <p>El minimalismo busca eliminar lo innecesario y enfocarse únicamente en lo esencial.</p>
+            <p>En diseño digital significa claridad, espacios limpios y menos distracción visual.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contraste" class="detalle reveal">
+    <div class="detalle-contenido reverse">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
+        <div class="texto">
+            <h2>Contraste</h2>
+            <p>El contraste permite destacar elementos importantes dentro de una interfaz.</p>
+            <p>Se logra combinando colores, tamaños y pesos tipográficos.</p>
+        </div>
+    </div>
+</section>
+
+<section id="tipografia" class="detalle reveal">
+    <div class="detalle-contenido">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" alt="">
+        <div class="texto">
+            <h2>Tipografía</h2>
+            <p>La tipografía no solo comunica texto, también comunica personalidad.</p>
+            <p>Una buena elección tipográfica mejora la experiencia del usuario.</p>
+        </div>
+    </div>
+</section>
+
+<section id="composicion" class="detalle reveal">
+    <div class="detalle-contenido reverse">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" alt="">
+        <div class="texto">
+            <h2>Composición</h2>
+            <p>La composición organiza los elementos visuales en armonía.</p>
+            <p>Guía la mirada del usuario de forma natural.</p>
+        </div>
+    </div>
+</section>
+
+<section id="color" class="detalle reveal">
+    <div class="detalle-contenido">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
+        <div class="texto">
+            <h2>Color</h2>
+            <p>El color transmite emociones y refuerza la identidad visual.</p>
+            <p>Su uso correcto genera impacto y coherencia.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BOTÓN FLOTANTE -->
+<a href="#inicio" class="back-to-top">↑</a>
+
+<footer>
+    <p>© 2026 Luis – Todos los derechos reservados.</p>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    reveals.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if(sectionTop < triggerBottom){
+            section.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+const button = document.querySelector(".back-to-top");
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 400){
+        button.classList.add("show");
+    } else {
+        button.classList.remove("show");
+    }
+});
+</script>
+
+</body>
+</html>
